@@ -1,0 +1,37 @@
+.container {
+  height: 150vh;
+  position: relative;
+  background-color: var(--text-muted);
+  overflow: hidden;
+}
+
+.name {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logos_section {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.logos_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  color: var(--text-primary);
+}

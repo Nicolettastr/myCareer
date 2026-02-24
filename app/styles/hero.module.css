@@ -1,0 +1,48 @@
+.container {
+  height: 500vh;
+  position: relative;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+}
+
+.wrapper h3 {
+  font-size: 15vw;
+  font-weight: bold;
+  color: var(--text-muted);
+  font-family: "BBH Hegarty", sans-serif;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.8rem;
+}
+
+.title_frontend {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper span {
+  font-size: 15vw;
+  font-weight: bold;
+  color: var(--text-muted);
+  font-family: "BBH Hegarty", sans-serif;
+}
+
+.title_engineer {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}

@@ -1,26 +1,97 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-base: #f0efed;
+  --color-mist: #cfc3b8;
+  --color-cream: #f0e8df;
+  --color-sand: #e2d5c8;
+  --color-blush: #c9b0a2;
+
+  --surface-bg: #f5f2ef;
+  --surface-card: #faf8f5;
+  --surface-elevated: #ffffff;
+  --surface-subtle: #ede8e2;
+  --surface-inverse: #2a211b;
+
+  --text-primary: #2a211b;
+  --text-secondary: #6b5e54;
+  --text-muted: #9e9089;
+  --text-inverse: #f0e8df;
+  --text-accent: #b8967e;
+
+  --border-subtle: rgba(207, 195, 184, 0.4);
+  --border-default: rgba(207, 195, 184, 0.7);
+  --border-strong: #cfc3b8;
+  --border-accent: #c9b0a2;
+
+  --accent-primary: #c9b0a2;
+  --accent-secondary: #b8967e;
+  --accent-light: #e8ddd6;
+  --accent-dark: #8c6e5f;
+
+  --color-success: #7a9e7e;
+  --color-warning: #c9a96e;
+  --color-error: #c97070;
+  --color-info: #7e9ab8;
+
+  --shadow-xs: 0 1px 2px rgba(42, 33, 27, 0.04);
+  --shadow-sm: 0 2px 8px rgba(42, 33, 27, 0.06);
+  --shadow-md: 0 4px 20px rgba(42, 33, 27, 0.08);
+  --shadow-lg: 0 8px 40px rgba(42, 33, 27, 0.1);
+  --shadow-xl: 0 20px 60px rgba(42, 33, 27, 0.12);
+
+  --overlay-light: rgba(245, 242, 239, 0.85);
+  --overlay-dark: rgba(42, 33, 27, 0.75);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="dark"] {
+  --surface-bg: #1e1710;
+  --surface-card: #261f17;
+  --surface-elevated: #2f2720;
+  --surface-subtle: #2a211b;
+  --surface-inverse: #f0e8df;
+
+  --text-primary: #f0d2af;
+  --text-secondary: #c9b8ac;
+  --text-muted: #8a7d73;
+  --text-inverse: #2a211b;
+  --text-accent: #d4b09a;
+
+  --border-subtle: rgba(201, 176, 162, 0.12);
+  --border-default: rgba(201, 176, 162, 0.22);
+  --border-strong: rgba(201, 176, 162, 0.4);
+  --border-accent: #c9b0a2;
+
+  --accent-primary: #c9b0a2;
+  --accent-secondary: #d4b09a;
+  --accent-light: rgba(201, 176, 162, 0.15);
+  --accent-dark: #b8967e;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  --overlay-light: rgba(30, 23, 16, 0.85);
+  --overlay-dark: rgba(0, 0, 0, 0.8);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  background: var(--surface-inverse);
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+}
+
+li {
+  list-style: none;
 }
