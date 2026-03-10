@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import styles from "../styles/hero.module.css";
+import { Name } from "./Name";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,7 +13,9 @@ export const Hero = () => {
   const container = useRef(null);
   const wrapperRef = useRef(null);
   const letterRef = useRef<HTMLDivElement>(null);
-  const nRef = useRef<HTMLSpanElement>(null);
+  const nRef = useRef<HTMLElement>(null);
+  const nameSectionRef = useRef<HTMLElement>(null);
+  const nameInner = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
@@ -34,9 +37,6 @@ export const Hero = () => {
           start: "top top",
           end: "+=400%",
           scrub: 1,
-          pin: false,
-          pinType: "transform",
-          anticipatePin: 1,
         },
       });
 
@@ -48,7 +48,7 @@ export const Hero = () => {
       tl.to(
         letterRef.current,
         {
-          scale: 50,
+          scale: 60,
           transformOrigin: `${originX}% ${originY}%`,
           ease: "none",
           duration: 2,
@@ -73,24 +73,45 @@ export const Hero = () => {
         },
         1,
       );
+
+      gsap.to(nameInner.current, {
+        y: 0,
+        opacity: 1,
+        ease: "power2.out",
+        duration: 2,
+        scrollTrigger: {
+          trigger: nameSectionRef.current,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+          markers: true,
+        },
+      });
     },
     { scope: container },
   );
 
   return (
-    <div ref={container} className={styles.container}>
-      <div ref={wrapperRef} className={styles.wrapper}>
-        <div ref={letterRef} className={styles.title}>
-          <div className={styles.title_frontend}>
-            <h3>FRO</h3>
-            <span ref={nRef}>N</span>
-            <h3>TEND</h3>
-          </div>
-          <div className={styles.title_engineer}>
-            <h3>ENGINEER</h3>
+    <>
+      <div ref={container} className={styles.container}>
+        <div ref={wrapperRef} className={styles.wrapper}>
+          <div ref={letterRef} className={styles.title}>
+            <div className={styles.title_frontend}>
+              <h3>FRO</h3>
+              <span ref={nRef}>N</span>
+              <h3>TEND</h3>
+            </div>
+            <div className={styles.title_engineer}>
+              <h3>ENGINEER</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      <section ref={nameSectionRef} className={styles.name_section}>
+        <div ref={nameInner} className={styles.name_inner}>
+          <Name />
+        </div>
+      </section>
+    </>
   );
 };
