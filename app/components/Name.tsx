@@ -72,7 +72,7 @@ export const Name = () => {
         <div className={styles.image_inner}>
           <Image
             className={styles.img_component}
-            src="/2.jpg"
+            src="/yo.jpeg"
             alt="abstract image"
             fill
           />

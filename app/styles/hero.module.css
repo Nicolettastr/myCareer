@@ -18,11 +18,17 @@
   top: 0;
 }
 
-.wrapper h3 {
-  font-size: 15vw;
+.wrapper h3,
+.wrapper span {
+  font-size: 30vw;
   font-weight: bold;
   color: var(--text-muted);
-  font-family: "BBH Hegarty", sans-serif;
+  font-family: var(--font-display);
+  line-height: 1;
+}
+
+.wrapper hr {
+  margin-bottom: 0.5rem;
 }
 
 .title {
@@ -38,17 +44,9 @@
   position: relative;
 }
 
-.wrapper span {
-  font-size: 15vw;
-  font-weight: bold;
-  color: var(--text-muted);
-  font-family: "BBH Hegarty", sans-serif;
-}
-
 .title_engineer {
   width: 100%;
   display: flex;
-  justify-content: end;
 }
 
 .name_section {
@@ -59,4 +57,15 @@
 .name_inner {
   transform: translateY(40vh);
   opacity: 0;
+}
+
+.scroll {
+  font-size: 0.8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll p {
+  padding: 1rem;
 }

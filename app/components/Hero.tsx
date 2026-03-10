@@ -4,12 +4,15 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
+import { useAnimationActionsStore } from "../stores/useAnimationActionsStore";
 import styles from "../styles/hero.module.css";
 import { Name } from "./Name";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
+  const setActiveNav = useAnimationActionsStore((state) => state.setActiveNav);
+
   const container = useRef(null);
   const wrapperRef = useRef(null);
   const letterRef = useRef<HTMLDivElement>(null);
@@ -19,6 +22,7 @@ export const Hero = () => {
 
   useGSAP(
     () => {
+      setActiveNav(false);
       if (!nRef.current || !letterRef.current) return;
 
       const nRect = nRef.current.getBoundingClientRect();
@@ -48,7 +52,7 @@ export const Hero = () => {
       tl.to(
         letterRef.current,
         {
-          scale: 60,
+          scale: 80,
           transformOrigin: `${originX}% ${originY}%`,
           ease: "none",
           duration: 2,
@@ -84,10 +88,12 @@ export const Hero = () => {
           start: "top 80%",
           end: "top 30%",
           scrub: true,
-          markers: true,
         },
       });
+
+      setActiveNav(true);
     },
+
     { scope: container },
   );
 
@@ -101,9 +107,14 @@ export const Hero = () => {
               <span ref={nRef}>N</span>
               <h3>TEND</h3>
             </div>
+            <hr />
             <div className={styles.title_engineer}>
               <h3>ENGINEER</h3>
             </div>
+          </div>
+          <div className={styles.scroll}>
+            <p>Scroll</p>
+            <p>Nicole Struggia</p>
           </div>
         </div>
       </div>

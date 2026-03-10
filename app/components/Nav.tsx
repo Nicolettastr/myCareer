@@ -2,11 +2,13 @@
 import { MenuIcon } from "lucide-react";
 import { useState } from "react";
 import useWindowWidth from "../hooks/useWindowWidth";
+import { useAnimationActionsStore } from "../stores/useAnimationActionsStore";
 import styles from "../styles/nav.module.css";
 
 export const Nav = () => {
   const width = useWindowWidth();
   const [showMenu, setShowMenu] = useState(false);
+  const activeNav = useAnimationActionsStore((state) => state.activeNav);
 
   if (!width) return;
 
@@ -24,7 +26,7 @@ export const Nav = () => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper}`}>
       <div className={`${styles.logo} ${showMenu ? styles.shadow : ""}`}>
         <p>NS</p>
       </div>

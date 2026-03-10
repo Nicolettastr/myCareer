@@ -1,12 +1,26 @@
 import type { Metadata } from "next";
-import { BBH_Hegarty } from "next/font/google";
+import { Bebas_Neue, DM_Mono, WindSong } from "next/font/google";
 import "./globals.css";
 
-const BBHHegarty = BBH_Hegarty({
+const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
   variable: "--font-display",
+});
+
+const dmMono = DM_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  style: ["normal"],
+  weight: ["300"],
+});
+
+const WindSongFont = WindSong({
+  variable: "--font-name",
+  subsets: ["latin"],
+  style: ["normal"],
+  weight: ["500"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${BBHHegarty.variable} antialiased`}>{children}</body>
+      <body
+        className={`${dmMono.variable} ${bebasNeue.variable} ${WindSongFont.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

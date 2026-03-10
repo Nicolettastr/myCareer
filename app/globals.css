@@ -89,7 +89,7 @@ body {
   overflow-x: hidden;
   background: var(--surface-inverse);
   color: var(--text-muted);
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-mono);
 }
 
 li {
@@ -103,4 +103,8 @@ li {
   justify-content: center;
   align-items: center;
   color: #141009;
+}
+
+p {
+  font-family: var(--font-mono);
 }
