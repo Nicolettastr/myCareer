@@ -20,16 +20,15 @@ export const experience: ExperienceEntry[] = [
     id: 1,
     period: "2023 — Present",
     role: "Frontend Engineer",
-    company: "BABEL Sistemas de Información",
+    company: "BABEL Group",
     companyShort: "BABEL",
-    location: "Remote · Madrid, Spain",
+    location: "Remote · Madrid",
     description:
       "Working on large-scale applications focusing on clean architecture, performance, and maintainability.",
     isActive: true,
     stats: [
-      { value: "350+", label: "Pull Requests" },
-      { value: "7", label: "Refactors led" },
-      { value: "3", label: "Teams synced" },
+      { value: "400+", label: "Pull Requests" },
+      { value: "8", label: "Refactors led" },
     ],
     highlights: [
       {
@@ -49,8 +48,7 @@ export const experience: ExperienceEntry[] = [
         em: ["Vitest"],
       },
       {
-        text: "Collaborated with frontend, backend, and QA teams across Scrum ceremonies",
-        em: ["Scrum ceremonies"],
+        text: "Bridged communication across frontend, backend, and QA teams to keep deliverables on track",
       },
     ],
     tags: ["TypeScript", "React", "Zustand", "TanStack", "Vitest", "Scrum"],
@@ -59,9 +57,9 @@ export const experience: ExperienceEntry[] = [
     id: 2,
     period: "2023",
     role: "Fullstack Engineer",
-    company: "BABEL Sistemas de Información",
+    company: "BABEL Group",
     companyShort: "BABEL",
-    location: "Remote · Madrid, Spain",
+    location: "Remote · Madrid",
     description:
       "Worked across frontend and backend in enterprise environments.",
     isActive: false,
@@ -89,7 +87,7 @@ export const experience: ExperienceEntry[] = [
     role: "Frontend Engineer",
     company: "Donair",
     companyShort: "Donair",
-    location: "Remote · Madrid, Spain",
+    location: "Remote · Madrid",
     description:
       "Delivered client-focused web solutions from concept to deployment.",
     isActive: false,
