@@ -44,6 +44,8 @@
 
   --overlay-light: rgba(245, 242, 239, 0.85);
   --overlay-dark: rgba(42, 33, 27, 0.75);
+
+  --details: #41431b;
 }
 
 [data-theme="dark"] {

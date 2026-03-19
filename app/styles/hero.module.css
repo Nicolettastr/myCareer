@@ -69,3 +69,8 @@
 .scroll p {
   padding: 1rem;
 }
+
+.mouse {
+  display: none;
+  width: 1rem;
+}

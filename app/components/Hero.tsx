@@ -3,6 +3,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Mouse } from "lucide-react";
 import { useRef } from "react";
 import { useAnimationActionsStore } from "../stores/useAnimationActionsStore";
 import styles from "../styles/hero.module.css";
@@ -19,10 +20,13 @@ export const Hero = () => {
   const nRef = useRef<HTMLElement>(null);
   const nameSectionRef = useRef<HTMLElement>(null);
   const nameInner = useRef<HTMLDivElement>(null);
+  const details = useRef<HTMLDivElement>(null);
+  const scroller = useRef<HTMLParagraphElement>(null);
+  const nameDetail = useRef<HTMLParagraphElement>(null);
+  const mouse = useRef<SVGSVGElement>(null);
 
   useGSAP(
     () => {
-      setActiveNav(false);
       if (!nRef.current || !letterRef.current) return;
 
       const nRect = nRef.current.getBoundingClientRect();
@@ -70,6 +74,42 @@ export const Hero = () => {
       );
 
       tl.to(
+        details.current,
+        {
+          scale: 1.5,
+          color: "black",
+          flexDirection: "column",
+          alignItems: "center",
+        },
+        1.8,
+      );
+
+      tl.to(
+        nameDetail.current,
+        {
+          opacity: 0,
+        },
+        1,
+      );
+
+      tl.to(
+        scroller.current,
+        {
+          scale: 1.5,
+          color: "black",
+        },
+        1.8,
+      );
+
+      tl.to(
+        mouse.current,
+        {
+          display: "block",
+        },
+        1.8,
+      );
+
+      tl.to(
         document.body,
         {
           backgroundColor: "var(--text-muted)",
@@ -79,6 +119,7 @@ export const Hero = () => {
       );
 
       gsap.to(nameInner.current, {
+        onStart: () => setActiveNav(false),
         y: 0,
         opacity: 1,
         ease: "power2.out",
@@ -89,9 +130,10 @@ export const Hero = () => {
           end: "top 30%",
           scrub: true,
         },
+        onComplete: () => {
+          setActiveNav(true);
+        },
       });
-
-      setActiveNav(true);
     },
 
     { scope: container },
@@ -112,9 +154,10 @@ export const Hero = () => {
               <h3>ENGINEER</h3>
             </div>
           </div>
-          <div className={styles.scroll}>
-            <p>Scroll</p>
-            <p>Nicole Struggia</p>
+          <div ref={details} className={styles.scroll}>
+            <p ref={scroller}>Scroll</p>
+            <Mouse ref={mouse} className={styles.mouse} />
+            <p ref={nameDetail}>Nicole Struggia</p>
           </div>
         </div>
       </div>

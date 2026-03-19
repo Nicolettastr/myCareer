@@ -25,8 +25,10 @@ export const Nav = () => {
     setShowMenu((prev) => !prev);
   };
 
+  console.log("activeNav", activeNav);
+
   return (
-    <div className={`${styles.wrapper}`}>
+    <div className={`${activeNav ? "activeNav" : ""} ${styles.wrapper}`}>
       <div className={`${styles.logo} ${showMenu ? styles.shadow : ""}`}>
         <p>NS</p>
       </div>
