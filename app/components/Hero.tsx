@@ -3,27 +3,21 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Mouse } from "lucide-react";
 import { useRef } from "react";
-import { useAnimationActionsStore } from "../stores/useAnimationActionsStore";
 import styles from "../styles/hero.module.css";
 import { Name } from "./Name";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
-  const setActiveNav = useAnimationActionsStore((state) => state.setActiveNav);
-
   const container = useRef(null);
   const wrapperRef = useRef(null);
   const letterRef = useRef<HTMLDivElement>(null);
   const nRef = useRef<HTMLElement>(null);
   const nameSectionRef = useRef<HTMLElement>(null);
   const nameInner = useRef<HTMLDivElement>(null);
-  const details = useRef<HTMLDivElement>(null);
   const scroller = useRef<HTMLParagraphElement>(null);
   const nameDetail = useRef<HTMLParagraphElement>(null);
-  const mouse = useRef<SVGSVGElement>(null);
 
   useGSAP(
     () => {
@@ -59,7 +53,7 @@ export const Hero = () => {
           scale: 80,
           transformOrigin: `${originX}% ${originY}%`,
           ease: "none",
-          duration: 2,
+          duration: 1.6,
         },
         0.2,
       );
@@ -70,18 +64,7 @@ export const Hero = () => {
           opacity: 0,
           duration: 0.5,
         },
-        1.8,
-      );
-
-      tl.to(
-        details.current,
-        {
-          scale: 1.5,
-          color: "black",
-          flexDirection: "column",
-          alignItems: "center",
-        },
-        1.8,
+        2.5,
       );
 
       tl.to(
@@ -95,18 +78,42 @@ export const Hero = () => {
       tl.to(
         scroller.current,
         {
-          scale: 1.5,
-          color: "black",
+          fontSize: "1.2rem",
         },
-        1.8,
+        1,
       );
 
       tl.to(
-        mouse.current,
+        scroller.current,
         {
-          display: "block",
+          onStart: () => {
+            const menu = document.getElementById("nav_menu_wrapper");
+            if (menu) menu.classList.add("scrolled");
+          },
+          y: 200,
+          color: "black",
+          ease: "none",
+          duration: 0.5,
+          onReverseComplete: () => {
+            const menu = document.getElementById("nav_menu_wrapper");
+            if (menu) menu.classList.remove("scrolled");
+          },
+          onComplete: () => {
+            const menu = document.getElementById("nav_menu_wrapper");
+            if (menu) menu.classList.add("scrolled");
+          },
         },
-        1.8,
+        1.2,
+      );
+
+      tl.to(
+        scroller.current,
+        {
+          x: 200,
+          ease: "none",
+          duration: 1,
+        },
+        1.6,
       );
 
       tl.to(
@@ -119,7 +126,6 @@ export const Hero = () => {
       );
 
       gsap.to(nameInner.current, {
-        onStart: () => setActiveNav(false),
         y: 0,
         opacity: 1,
         ease: "power2.out",
@@ -129,9 +135,6 @@ export const Hero = () => {
           start: "top 80%",
           end: "top 30%",
           scrub: true,
-        },
-        onComplete: () => {
-          setActiveNav(true);
         },
       });
     },
@@ -154,9 +157,10 @@ export const Hero = () => {
               <h3>ENGINEER</h3>
             </div>
           </div>
-          <div ref={details} className={styles.scroll}>
-            <p ref={scroller}>Scroll</p>
-            <Mouse ref={mouse} className={styles.mouse} />
+          <div className={styles.scroll}>
+            <p ref={scroller} className={styles.scroller}>
+              Scroll
+            </p>
             <p ref={nameDetail}>Nicole Struggia</p>
           </div>
         </div>

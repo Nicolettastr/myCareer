@@ -19,6 +19,7 @@ export const Name = () => {
       gsap.to(imageTopLeft.current, {
         yPercent: -120,
         ease: "none",
+
         scrollTrigger: {
           trigger: container.current,
           start: "top bottom",

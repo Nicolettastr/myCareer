@@ -46,6 +46,8 @@
   --overlay-dark: rgba(42, 33, 27, 0.75);
 
   --details: #41431b;
+
+  --nav-color: #faf8f563;
 }
 
 [data-theme="dark"] {
@@ -109,4 +111,35 @@ li {
 
 p {
   font-family: var(--font-mono);
+}
+
+#nav_menu_wrapper::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--nav-color);
+  backdrop-filter: blur(12px);
+  transition: top 0.4s ease;
+  z-index: -1;
+}
+
+#nav_menu_wrapper.scrolled::before {
+  top: 0;
+}
+
+#nav_menu_wrapper {
+  overflow: hidden;
+}
+
+#nav_menu_logo,
+#nav_menu_icon {
+  transition: color 0.4s ease;
+}
+
+#nav_menu_wrapper.scrolled #nav_menu_logo,
+#nav_menu_wrapper.scrolled #nav_menu_icon {
+  color: var(--text-primary);
 }
