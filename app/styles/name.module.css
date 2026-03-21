@@ -1,8 +1,14 @@
 .container {
   position: relative;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
   background-color: var(--text-muted);
@@ -27,8 +33,11 @@
 
 .img_component {
   height: 160%;
+  -o-object-fit: cover;
   object-fit: cover;
   display: block;
+  -webkit-transform: translateY(-15%);
+  -ms-transform: translateY(-15%);
   transform: translateY(-15%);
 }
 
@@ -37,6 +46,8 @@
   aspect-ratio: 3/4;
   top: 70%;
   left: 5%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1;
 }
