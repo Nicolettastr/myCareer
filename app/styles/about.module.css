@@ -2,6 +2,8 @@
   width: 100vw;
   height: 100vh;
   color: black;
+  border-bottom: 1px solid var(--color-base);
+  border-top: 1px solid var(--color-base);
 }
 
 .wrapper {
@@ -37,7 +39,6 @@
   width: 80%;
   font-size: 0.8rem;
   color: var(--text-muted);
-  font-family: var(--font-mono);
   text-align: left;
   margin-bottom: 1rem;
 }

@@ -1,0 +1,86 @@
+/* Contenedor principal (suponiendo que envuelves el componente en un div con esta clase) */
+.cardContainer {
+  background-color: var(--color-pink);
+  border: 1px solid var(--text-inverse);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.index {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--details);
+}
+
+.card_title {
+  font-size: 2rem !important;
+  color: var(--color-orange) !important;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--details);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.linkIcon {
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 1rem 0;
+  max-width: 90%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tags {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  border: 1px solid var(--color-orange);
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  background: transparent;
+}
+
+.year {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}

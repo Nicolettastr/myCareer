@@ -43,7 +43,7 @@ export const Hero = () => {
       });
 
       tl.to(wrapperRef.current, {
-        background: "#000",
+        background: "var(--text-primary)",
         duration: 1,
       });
 
