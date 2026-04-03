@@ -90,14 +90,16 @@ export const Skills = () => {
 
   return (
     <section id="skills" ref={container} className={styles.container}>
-      <h2 className={`title ${styles.title}`}>Skills and tools</h2>
-      <div ref={wrapper} className={styles.wrapper}>
-        <section className={styles.section_lang}>
-          <div className={styles.tech_wrapper}>{languagesDisplay}</div>
-        </section>
-        <section className={styles.section_tools}>
-          <div className={styles.tools_wrapper}>{toolsDisplay}</div>
-        </section>
+      <div className={styles.containerSection}>
+        <h2 className={`title ${styles.title}`}>Skills and tools</h2>
+        <div ref={wrapper} className={styles.wrapper}>
+          <section className={styles.section_lang}>
+            <div className={styles.tech_wrapper}>{languagesDisplay}</div>
+          </section>
+          <section className={styles.section_tools}>
+            <div className={styles.tools_wrapper}>{toolsDisplay}</div>
+          </section>
+        </div>
       </div>
     </section>
   );

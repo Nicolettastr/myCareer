@@ -41,3 +41,31 @@
   color: var(--color-primary);
   margin-bottom: 0.5rem;
 }
+
+@media (min-width: 768px) {
+  .skill {
+    max-width: 400px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+  }
+
+  .containerSection {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill {
+    width: 220px;
+    height: 100px;
+  }
+
+  .wrapper {
+    justify-content: flex-start;
+  }
+}

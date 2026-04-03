@@ -38,13 +38,6 @@ export const ContactMe = () => {
             SEND
           </button>
         </form>
-
-        <footer className={styles.contactFooter}>
-          <hr className={styles.divider} />
-          <div className={styles.logoCircle}>
-            <span className={styles.logoN}>N</span>
-          </div>
-        </footer>
       </div>
     </section>
   );

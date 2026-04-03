@@ -21,6 +21,8 @@ export const Hero = () => {
 
   useGSAP(
     () => {
+      const isDesktop = window.innerWidth >= 900;
+
       if (!nRef.current || !letterRef.current) return;
 
       const nRect = nRef.current.getBoundingClientRect();
@@ -90,7 +92,7 @@ export const Hero = () => {
             const menu = document.getElementById("nav_menu_wrapper");
             if (menu) menu.classList.add("scrolled");
           },
-          y: 200,
+          y: isDesktop ? 250 : 200,
           color: "black",
           ease: "none",
           duration: 0.5,
@@ -109,7 +111,7 @@ export const Hero = () => {
       tl.to(
         scroller.current,
         {
-          x: 200,
+          x: isDesktop ? -250 : 200,
           ease: "none",
           duration: 1,
         },

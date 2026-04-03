@@ -1,5 +1,5 @@
 .wrapper {
-  width: 100vw;
+  width: 100%;
   height: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,4 +128,51 @@
 
 .menu_options li a:hover {
   color: var(--color-orange);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 10%;
+    position: relative;
+  }
+
+  .menu_icon {
+    display: none;
+  }
+
+  .mobile_menu {
+    position: relative;
+    transform: translateX(0);
+    width: auto;
+    max-width: unset;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    flex-direction: row;
+  }
+
+  .mobile_menu div {
+    display: none;
+  }
+
+  .menu_options {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0;
+    gap: 0.5rem;
+  }
+
+  .menu_options li a {
+    font-size: 1rem;
+    color: var(--text-muted);
+  }
 }

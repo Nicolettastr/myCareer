@@ -113,3 +113,9 @@ h2.title {
 a {
   text-decoration: none;
 }
+
+@media (min-width: 1024px) {
+  h2.title {
+    font-size: 14vw !important;
+  }
+}

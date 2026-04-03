@@ -57,8 +57,10 @@ export const Experience = () => {
 
   return (
     <section className={styles.container}>
-      <h2 className="title">Professional Experience</h2>
-      <div className={styles.wrapper}>{displayExperience}</div>
+      <div className={styles.containerSection}>
+        <h2 className="title">Professional Experience</h2>
+        <div className={styles.wrapper}>{displayExperience}</div>
+      </div>
     </section>
   );
 };

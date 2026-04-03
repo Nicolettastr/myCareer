@@ -24,10 +24,15 @@ export const Projects = () => {
   return (
     <>
       <div id="projects" className={styles.projects}>
-        <h2 className={`title ${styles.title}`}>Personal projects</h2>
-        {projects.map((project, i) => (
-          <ProjectCard key={i} index={i} {...project} />
-        ))}
+        <div className={styles.containerSection}>
+          <h2 className={`title ${styles.title}`}>Personal projects</h2>
+          <div className={styles.cardWrapper}>
+            {" "}
+            {projects.map((project) => (
+              <ProjectCard key={project.name} {...project} />
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );

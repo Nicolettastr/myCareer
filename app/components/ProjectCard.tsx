@@ -1,7 +1,6 @@
 import styles from "../styles/projectCard.module.css";
 
 interface ProjectCardProps {
-  index: number;
   name: string;
   description: string;
   tags: string[];
@@ -10,7 +9,6 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({
-  index,
   name,
   description,
   tags,

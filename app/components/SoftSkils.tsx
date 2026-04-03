@@ -20,14 +20,16 @@ export const SoftSkils = () => {
 
   return (
     <div id="soft-skills" className={styles.container}>
-      <h2 className={`title ${styles.title}`}>Soft Skills</h2>
-      <div className={styles.wrapper}>
-        {softSkills.map((skill, i) => (
-          <div key={skill.name} className={styles.skill}>
-            <skill.icon className={styles.icon} />
-            <p>{skill.name}</p>
-          </div>
-        ))}
+      <div className={styles.containerSection}>
+        <h2 className={`title ${styles.title}`}>Soft Skills</h2>
+        <div className={styles.wrapper}>
+          {softSkills.map((skill, i) => (
+            <div key={skill.name} className={styles.skill}>
+              <skill.icon className={styles.icon} />
+              <p>{skill.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

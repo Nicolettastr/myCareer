@@ -84,3 +84,15 @@
   color: var(--text-secondary);
   font-weight: 400;
 }
+
+@media (min-width: 768px) {
+  .cardContainer {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardContainer {
+    max-width: 400px;
+  }
+}

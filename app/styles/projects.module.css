@@ -11,3 +11,19 @@
 .title {
   color: var(--color-orange) !important;
 }
+
+@media (min-width: 768px) {
+  .containerSection {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardWrapper {
+    display: flex;
+  }
+}
