@@ -1,6 +1,6 @@
 /* Contenedor principal (suponiendo que envuelves el componente en un div con esta clase) */
 .cardContainer {
-  background-color: var(--color-pink);
+  background-color: var(--color-base);
   border: 1px solid var(--text-inverse);
   border-radius: 12px;
   padding: 2rem;
