@@ -23,7 +23,7 @@ export const Projects = () => {
 
   return (
     <>
-      <div className={styles.projects}>
+      <div id="projects" className={styles.projects}>
         <h2 className={`title ${styles.title}`}>Personal projects</h2>
         {projects.map((project, i) => (
           <ProjectCard key={i} index={i} {...project} />

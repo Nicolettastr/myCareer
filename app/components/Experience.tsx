@@ -21,12 +21,8 @@ export const Experience = () => {
         })
       : null;
 
-    const tags = work.tags.map((tag) => {
-      return <span key={tag}>{tag}</span>;
-    });
-
     return (
-      <div className={styles.experience_section} key={work.id}>
+      <div id="experience" className={styles.experience_section} key={work.id}>
         <div className={styles.experience_wrapper}>
           <div className={styles.period}>
             <hr />

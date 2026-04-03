@@ -89,7 +89,7 @@ export const Skills = () => {
   });
 
   return (
-    <section ref={container} className={styles.container}>
+    <section id="skills" ref={container} className={styles.container}>
       <h2 className={`title ${styles.title}`}>Skills and tools</h2>
       <div ref={wrapper} className={styles.wrapper}>
         <section className={styles.section_lang}>

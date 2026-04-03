@@ -19,7 +19,7 @@ export const SoftSkils = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <div id="soft-skills" className={styles.container}>
       <h2 className={`title ${styles.title}`}>Soft Skills</h2>
       <div className={styles.wrapper}>
         {softSkills.map((skill, i) => (

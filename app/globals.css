@@ -109,3 +109,7 @@ h2.title {
   line-height: 1;
   padding: 0.8rem;
 }
+
+a {
+  text-decoration: none;
+}

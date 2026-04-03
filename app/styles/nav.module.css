@@ -103,6 +103,7 @@
 .menu_options {
   width: 100%;
   height: 100%;
+  padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,12 +119,13 @@
   justify-content: center;
 }
 
-.menu_options li {
+.menu_options li a {
   font-size: 2rem;
   padding: 0.5rem;
   text-align: center;
+  color: var(--text-secondary);
 }
 
-.menu_options li:hover {
-  color: var(--text-secondary);
+.menu_options li a:hover {
+  color: var(--color-orange);
 }

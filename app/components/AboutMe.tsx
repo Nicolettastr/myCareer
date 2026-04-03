@@ -35,7 +35,7 @@ export const AboutMe = () => {
   );
 
   return (
-    <section ref={container} className={styles.container}>
+    <section id="about" ref={container} className={styles.container}>
       <div ref={wrapper} className={styles.wrapper}>
         <p>About me</p>
         <hr />

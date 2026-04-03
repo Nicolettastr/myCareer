@@ -12,10 +12,24 @@ export const Nav = () => {
 
   const menuOptions = (
     <ul className={styles.menu_options}>
-      <li>About me</li>
-      <li>Skills</li>
-      <li>Experience</li>
-      <li>Contact me</li>
+      <li>
+        <a href="#about">About me</a>
+      </li>
+      <li>
+        <a href="#experience">Experience</a>
+      </li>
+      <li>
+        <a href="#skills">Skills</a>
+      </li>
+      <li>
+        <a href="#soft-skills">Soft skills</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact">Contact me</a>
+      </li>
     </ul>
   );
 
