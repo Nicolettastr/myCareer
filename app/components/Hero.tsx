@@ -80,7 +80,11 @@ export const Hero = () => {
       tl.to(
         scroller.current,
         {
-          fontSize: "1.2rem",
+          fontSize: "16vw",
+          fontWeight: "bold",
+          fontFamily: "var(--font-display)",
+          lineHeight: 1,
+          padding: "0.8rem",
         },
         1,
       );
@@ -92,7 +96,7 @@ export const Hero = () => {
             const menu = document.getElementById("nav_menu_wrapper");
             if (menu) menu.classList.add("scrolled");
           },
-          y: isDesktop ? 250 : 200,
+          y: isDesktop ? 250 : 180,
           color: "black",
           ease: "none",
           duration: 0.5,

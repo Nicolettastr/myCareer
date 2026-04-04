@@ -95,8 +95,12 @@ export const Name = () => {
       </div>
 
       <div className={styles.name_wrapper}>
-        <h2>Nicole</h2>
-        <h2>Struggia</h2>
+        <h2>
+          <span className={styles.capital}>N</span>icole
+        </h2>
+        <h2>
+          <span className={styles.capital}>S</span>truggia
+        </h2>
       </div>
     </section>
   );
