@@ -125,6 +125,11 @@ a {
 
 @media (min-width: 1024px) {
   h2.title {
-    font-size: 14vw !important;
+    font-size: 12vw !important;
+  }
+
+  h3.title {
+    font-size: 3vw !important;
+    color: var(--details);
   }
 }
