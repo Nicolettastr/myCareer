@@ -19,7 +19,7 @@ const ProjectCard = ({
     <div className={styles.cardContainer}>
       <div className={styles.header}>
         <div className={styles.titleGroup}>
-          <h2 className={`title ${styles.card_title}`}>{name}</h2>
+          <h3 className={`title ${styles.card_title}`}>{name}</h3>
         </div>
 
         {link && (
