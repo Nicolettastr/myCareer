@@ -30,7 +30,7 @@ export const Experience = () => {
             <hr />
           </div>
           <div className={styles.experience_title}>
-            <h2 className="title">{work.role}</h2>
+            <h3 className="title">{work.role}</h3>
             <div>
               <p className={styles.company}>{work.company}</p>
               <p className={styles.location}>{work.location}</p>
@@ -49,7 +49,6 @@ export const Experience = () => {
               })}
             </ul>
           </div>
-          {/* <div className={styles.tags}>{tags}</div> */}
         </div>
       </div>
     );

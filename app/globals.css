@@ -103,11 +103,20 @@ p {
 
 h2.title {
   font-size: 16vw;
-  font-weight: bold;
   color: var(--text-secondary);
+}
+
+h2.title,
+h3.title {
+  font-weight: bold;
   font-family: var(--font-display) !important;
   line-height: 1;
   padding: 0.8rem;
+}
+
+h3.title {
+  font-size: 5vw !important;
+  color: var(--details);
 }
 
 a {
